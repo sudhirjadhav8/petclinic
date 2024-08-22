@@ -1,14 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Setup') {
-            steps {
-                script {
-			
-                    sh 'az aks get-credentials --resource-group CICD --name demo'
-                }
-            }
-        }
         stage('Build on k8') {
             steps {           
                 sh 'pwd'
